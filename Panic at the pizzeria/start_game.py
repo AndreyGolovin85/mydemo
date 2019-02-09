@@ -4,6 +4,7 @@ import sys
 import pygame
 from pygame.sprite import Sprite
 from pygame.sprite import Group
+from button import Button
 from setting import Settings
 from pan import Pan
 from pizza import Pizza
@@ -21,6 +22,8 @@ def rungame():
                     (ai_setting.game_width, ai_setting.game_height))
     pygame.display.set_caption("Panic at the pizzeria")
     
+    # Создание кнопки Play.
+    play_button = Button(ai_setting, screen_game, "Play")
     # Создание сковороды.
     pan = Pan(screen_game, ai_setting)
     # Создание пиццы.
@@ -41,6 +44,7 @@ def rungame():
         # Обновление экрана.
         screen_game.blit(ai_setting.bg_fon, ai_setting.bg_rect)
         gf.update_screen(screen_game,ai_setting, pizzas,
-                         pan, pans, pizza, stats, sb, chef, numberspizza)
+                         pan, pans, pizza, stats, sb, chef,
+                         numberspizza, play_button)
         
 rungame()
