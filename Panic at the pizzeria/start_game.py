@@ -21,9 +21,11 @@ def rungame():
     screen_game = pygame.display.set_mode(
                     (ai_setting.game_width, ai_setting.game_height))
     pygame.display.set_caption("Panic at the pizzeria")
-    
-    # Создание кнопки Play.
+    # Создание кнопок Play, Help, Quit.
     play_button = Button(ai_setting, screen_game, "Play")
+    help_button = Button(ai_setting, screen_game, "Help")
+    quit_button = Button(ai_setting, screen_game, "Exit")
+    
     # Создание сковороды.
     pan = Pan(screen_game, ai_setting)
     # Создание пиццы.
@@ -45,6 +47,6 @@ def rungame():
         screen_game.blit(ai_setting.bg_fon, ai_setting.bg_rect)
         gf.update_screen(screen_game,ai_setting, pizzas,
                          pan, pans, pizza, stats, sb, chef,
-                         numberspizza, play_button)
+                         numberspizza, play_button, help_button, quit_button)
         
 rungame()
