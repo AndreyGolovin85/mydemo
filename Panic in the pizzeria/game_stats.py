@@ -7,7 +7,10 @@ class GameStats():
         
         # Игра запускается в неактивном состоянии.
         self.game_active = False
+        # Флаг перехода в раздел помощь.
         self.help_active = False
+        # Флаг подтверждения выхода из игры.
+        self.game_exit = False
         
     def reset_stats(self):
         self.score = 0
