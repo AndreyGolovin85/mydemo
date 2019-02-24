@@ -51,6 +51,18 @@ class Button():
         self.msg_image_rect_4 = self.msg_image_4.get_rect()
         self.msg_image_rect_4.center = self.rect_4.center
         
+    def prep_msg_5(self, msg):
+        self.msg_image_5 = self.font.render(msg, True, self.text_color,
+                                          self.button_color)
+        self.msg_image_rect_5 = self.msg_image_5.get_rect()
+        self.msg_image_rect_5.center = self.rect_5.center
+    
+    def prep_msg_6(self, msg):
+        self.msg_image_6 = self.font.render(msg, True, self.text_color,
+                                          self.button_color)
+        self.msg_image_rect_6 = self.msg_image_6.get_rect()
+        self.msg_image_rect_6.center = self.rect_6.center
+        
     def draw_button_1(self):
         # Отображение пустой кнопки и вывод сообщения.
         self.screen_game.fill(self.button_color, self.rect_1)
@@ -67,3 +79,11 @@ class Button():
     def draw_button_4(self):
         self.screen_game.fill(self.button_color, self.rect_4)
         self.screen_game.blit(self.msg_image_4, self.msg_image_rect_4)
+        
+    def draw_button_5(self):
+        self.screen_game.fill(self.button_color, self.rect_5)
+        self.screen_game.blit(self.msg_image_5, self.msg_image_rect_5)
+    
+    def draw_button_6(self):
+        self.screen_game.fill(self.button_color, self.rect_6)
+        self.screen_game.blit(self.msg_image_6, self.msg_image_rect_6)
