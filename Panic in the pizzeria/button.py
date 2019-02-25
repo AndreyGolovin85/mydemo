@@ -18,11 +18,15 @@ class Button():
         self.rect_2 = pygame.Rect(280, 180, self.width, self.height)
         self.rect_3 = pygame.Rect(280, 280, self.width, self.height)
         self.rect_4 = pygame.Rect(280, 400, self.width, self.height)
+        self.rect_5 = pygame.Rect(100, 300, self.width, self.height)
+        self.rect_6 = pygame.Rect(460, 300, self.width, self.height)
         # Сообщение кнопки создается только один раз.
         self.prep_msg_1(msg)
         self.prep_msg_2(msg)
         self.prep_msg_3(msg)
         self.prep_msg_4(msg)
+        self.prep_msg_5(msg)
+        self.prep_msg_6(msg)
         
     def prep_msg_1(self, msg):
         """Преобразует msg в прямоугольник и выравнивает текст по центру."""
